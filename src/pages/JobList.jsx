@@ -1,34 +1,15 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { setLoading, serError, setJobs } from "../redux/slices/jobSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import Loader from "../components/Loader";
 import Error from "../components/Error";
 import Card from "../components/Card";
+import Filter from "../components/Filter";
 
-const JobList = () => {
+const JobList = ({ getJobs }) => {
   const jobState = useSelector((store) => store.jobReducer);
 
-  const dispatch = useDispatch();
-
-  // api isteği atıp cevabı store a bildirir
-  const getJobs = () => {
-    // slice'daki yükleniyoru true ya çek
-    dispatch(setLoading());
-    // api isteği at
-    axios
-      .get("http://localhost:3001/jobs")
-      //   slice daki veriyi güncelle
-      .then((res) => dispatch(setJobs(res.data)))
-      //   slice daki error u güncelle
-      .catch((err) => dispatch(serError(err.message)));
-  };
-
-  useEffect(() => {
-    getJobs();
-  }, []);
   return (
     <div className="list-page">
+      <Filter />
       {/* 
     1) yüklenme devam ediyorsa ekrana loader bas
     2) yüklenme bittiyse ve hata varsa ekrana hatayı ve tekrar dene butonu bas
