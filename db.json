@@ -1,31 +1,3 @@
 {
-  "jobs": [
-    {
-      "id": "7",
-      "position": "Frontend Developer",
-      "company": "Udemig",
-      "location": "İzmir/Bayraklı",
-      "status": "Devam Ediyor",
-      "type": "Tam Zamanlı",
-      "date": "1/17/2021"
-    },
-    {
-      "id": "8",
-      "position": "Marketing Manager",
-      "company": "Coca Cola",
-      "location": "İstanbul/Levent",
-      "status": "Mülakat",
-      "type": "Tam Zamanlı",
-      "date": "9/12/2020"
-    },
-    {
-      "id": "fddd951e-c19c-42ea-b168-f6fbb8a4621f",
-      "position": "Frontend Developer",
-      "company": "Coca Cola",
-      "location": "İzmir/Bayraklı",
-      "status": "Reddedildi",
-      "type": "Yarı Zamanlı",
-      "date": "02.03.2024"
-    }
-  ]
+  "jobs": []
 }

@@ -36,7 +36,7 @@ const jobSlice = createSlice({
         // aratılan şirket ismine göre filtrele
         filterBySearch: (state, action) => {
             // aratılan kelime
-            const query = action.payload.toLowerCase();
+            const query = action.payload.text.toLowerCase();
 
             // filtreleme yap
             state.jobs = state.mainJobs.filter((i) => i[action.payload.name].toLowerCase().includes(query)) || i.position.toLowerCase().includes(query)
