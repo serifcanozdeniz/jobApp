@@ -5,6 +5,7 @@ import { sortJobs } from "../redux/slices/jobSlice";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useDebounce } from "../../node_modules/@uidotdev/usehooks/index";
+import { clearFilters } from "../redux/slices/jobSlice";
 
 const Filter = () => {
   const [text, setText] = useState("");
@@ -85,7 +86,11 @@ const Filter = () => {
         </div>
 
         <div>
-          <button type="reset" id="special-button">
+          <button
+            onClick={() => dispatch(clearFilters())}
+            type="reset"
+            id="special-button"
+          >
             <span className="circle1"></span>
             <span className="circle2"></span>
             <span className="circle3"></span>
