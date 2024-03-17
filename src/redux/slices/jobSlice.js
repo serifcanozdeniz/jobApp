@@ -10,7 +10,7 @@ const jobSlice = createSlice({
     name: "job",
     initialState,
     reducers: {
-        setLoading: (state, action) => {
+        setLoading: (state) => {
             state.isLoading = true;
         },
         setError: (state, action) => {

@@ -25,6 +25,7 @@ const AddJob = () => {
 
     // tarih ve id ekle
     newJobData.date = new Date().toLocaleDateString();
+
     newJobData.id = v4();
 
     // api a veriyi ekle
