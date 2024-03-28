@@ -1,13 +1,3 @@
 {
-  "jobs": [
-    {
-      "id": "869a3815-f38e-46c2-8a18-749271057aa2",
-      "position": "Frontend Developer",
-      "company": "wqdas",
-      "location": "asda",
-      "status": "Devam Ediyor",
-      "type": "Yarı Zamanlı",
-      "date": "17.03.2024"
-    }
-  ]
+  "jobs": []
 }

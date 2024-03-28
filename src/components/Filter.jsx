@@ -8,7 +8,7 @@ import { useDebounce } from "../../node_modules/@uidotdev/usehooks/index";
 import { clearFilters } from "../redux/slices/jobSlice";
 
 const Filter = () => {
-  const [text, setText] = useState("");
+  const [text, setText] = useState();
   const dispatch = useDispatch();
   // 2.yol
   const debouncedText = useDebounce(text, 300);
